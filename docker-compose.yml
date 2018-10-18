@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  fair:
+    # build: .
+    image: sv99/firelayer_fair
+    ports:
+      - "8001:8001"
