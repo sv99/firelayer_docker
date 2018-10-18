@@ -1,7 +1,9 @@
 Firelayer dockerized
 ====================
 
-install from site [fairlayer.com](https://fairlayer.com/#install)
+Install from site [fairlayer.com](https://fairlayer.com/#install)
+
+p.s. not worked on my MAC - get segmentation fault
 
 ```bash
 id=fair
@@ -14,11 +16,14 @@ if [[ -x /usr/bin/sha256sum ]] && sha256sum $f || shasum -a 256 $f | grep \
 fi
 ```
 
+Dockerized install
 ```bash
+# 1.
 # download image from https://hub.docker.com/r/sv99/firelayer_fair/
 docker-compose up
 
-# build image local from Dockerfil, need Fair-1701.tar.gz
+# 2.
+# build image local from Dockerfile, need Fair-1701.tar.gz
 docker-compose -f docker-compose_gen.yml up
 ```
 
